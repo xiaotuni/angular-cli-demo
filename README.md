@@ -1,3 +1,6 @@
+如果想要默认使用scss，可以用这命令创建项目：
+ ng new my-project --style=scss
+
 # MyProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
