@@ -1,3 +1,19 @@
 <h1>
-  {{title}}
+  哈哈 {{title}}
 </h1>
+<h2>router用法</h2>
+<a routerLink="/member">member</a>
+<a routerLink="/product">product</a>
+<a routerLink="/mycomponent">mycomponent</a>
+<hr/>
+<a [routerLink]="['/member']">member</a>
+<a [routerLink]="['/product']">product</a>
+<a [routerLink]="['/mycomponent']">mycomponent</a>
+<hr/>
+
+
+<br/>
+<router-outlet></router-outlet>
+<!--<app-my-component> </app-my-component>
+<app-product></app-product>
+<app-members></app-members>-->
