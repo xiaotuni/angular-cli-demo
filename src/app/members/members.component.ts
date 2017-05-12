@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { routerTransition } from '../router.animations';
 
 @Component({
   selector: 'app-members',
   templateUrl: './members.component.html',
-  styleUrls: ['./members.component.scss']
+  styleUrls: ['./members.component.scss'],
+  animations: [routerTransition()],
+  host: { '[@routerTransition]': '' }
 })
 export class MembersComponent implements OnInit {
 
