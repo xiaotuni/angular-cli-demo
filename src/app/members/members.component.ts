@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { routerTransition } from '../router.animations';
+import { routerTransition, routerTransition1 } from '../router.animations';
+import { Utility } from '../Common/Utility';
+// let __IsAppGoBack = Utility.$GetContent(Utility.$ConstItem.AppIsGoBack);
 
 @Component({
   selector: 'app-members',
   templateUrl: './members.component.html',
   styleUrls: ['./members.component.scss'],
-  animations: [routerTransition()],
-  host: { '[@routerTransition]': '' }
+  animations: [routerTransition(false)],
+  host: { '[@routerTransition]': '111' }
 })
 export class MembersComponent implements OnInit {
 

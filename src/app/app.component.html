@@ -1,19 +1,23 @@
-<h1>
-  哈哈 {{title}}
-</h1>
-<h2>router用法</h2>
-<a routerLink="/member">member</a>
-<a routerLink="/product">product</a>
-<a routerLink="/mycomponent">mycomponent</a>
-<hr/>
-<a [routerLink]="['/member']">member</a>
-<a [routerLink]="['/product']">product</a>
-<a [routerLink]="['/mycomponent']">mycomponent</a>
-<hr/>
+<div class="appCss">
 
-
-<br/>
-<router-outlet></router-outlet>
-<!--<app-my-component> </app-my-component>
+  <div class="btnGoBack">
+    <div (click)="__GoBack()">后退</div>
+  </div>
+  <div class="routerDesc">router用法</div>
+  <div class="navber">
+    <div class="rouer">
+      <a routerLink="/member">member</a>
+      <a routerLink="/product">product</a>
+      <a routerLink="/mycomponent">mycomponent</a>
+    </div>
+    <div class="rouer">
+      <a [routerLink]="['/member']">member</a>
+      <a [routerLink]="['/product']">product</a>
+      <a [routerLink]="['/mycomponent']">mycomponent</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <!--<app-my-component> </app-my-component>
 <app-product></app-product>
 <app-members></app-members>-->
+</div>

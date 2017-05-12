@@ -14,4 +14,5 @@ const routes = [
   { path: '**', component: NotFoundComponent }
 ];
 
-export const AppRouting = RouterModule.forRoot(routes, { useHash: true });
+// export const AppRouting = RouterModule.forRoot(routes, { useHash: true });
+export const AppRouting = RouterModule.forRoot(routes, { useHash: !true });
