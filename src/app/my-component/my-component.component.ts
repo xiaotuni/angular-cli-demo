@@ -10,4 +10,8 @@ import { BaseComponent } from '../base.component';
 })
 export class MyComponentComponent extends BaseComponent implements OnInit {
   title = "page 3";
+
+  ngOnInit(): void {
+
+  }
 }

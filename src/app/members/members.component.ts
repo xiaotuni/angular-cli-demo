@@ -12,4 +12,9 @@ import { BaseComponent } from '../base.component';
 })
 export class MembersComponent extends BaseComponent implements OnInit {
   title = "成员组件";
+
+
+  ngOnInit(): void {
+
+  }
 }

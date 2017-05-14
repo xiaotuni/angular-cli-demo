@@ -12,4 +12,7 @@ export class ProductComponent extends BaseComponent implements OnInit {
 
   title = "page 2";
 
+  ngOnInit(): void {
+  
+  }
 }
