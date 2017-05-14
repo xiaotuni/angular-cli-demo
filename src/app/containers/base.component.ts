@@ -1,6 +1,6 @@
 import { Component, HostBinding } from '@angular/core';
 import { routeAnimation } from './app.animations';
-import { Utility } from './app.coms';
+import { Utility } from './Core';
 
 @Component({
   moduleId: module.id,
@@ -12,7 +12,7 @@ export class BaseComponent {
     const IsGoBack = Utility.$GetContent(Utility.$ConstItem.AppIsGoBack);
     return !!IsGoBack ? 'backward' : 'forward';
   }
-  @HostBinding('style.display') display = "block";
+  // @HostBinding('style.display') display = "block";
   _animationServiceEventsSubscription: any;
 
   constructor() {

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Utility } from '../Common/Utility';
+import { Utility } from '../Core';
 import { routeAnimation } from '../app.animations';
-import { AnimationService } from '../app.animation.service';
 import { BaseComponent } from '../base.component';
+
 
 @Component({
   selector: 'app-members',

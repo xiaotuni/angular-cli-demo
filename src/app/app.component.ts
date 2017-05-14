@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 import { Location } from '@angular/common';
-import { Utility } from './app.coms';
-// import { routeAnimation } from './app.animations';
+import { Utility } from './containers/Core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  // animations: [routeAnimation]
 })
 export class AppComponent {
   title = 'app works!';
@@ -35,7 +34,12 @@ export class AppComponent {
       }
     });
     window.onpopstate = (a) => {
-      console.log('pop');
+      // console.log('pop');
+      // const __key = Utility.$ConstItem.AppIsGoBack;
+      // Utility.$SetContent(__key, true, false);;
+      // setTimeout(() => {
+      //   Utility.$RemoveContent(__key, false);
+      // }, 650);
     };
     // router.events.changes(() => { });
     // router.subscribe((item) => { });
