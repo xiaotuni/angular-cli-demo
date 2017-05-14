@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router, RoutesRecognized } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { Router, RoutesRecognized, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Utility } from './containers/Core';
 
@@ -10,15 +11,17 @@ import { Utility } from './containers/Core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'app works!';
+  __Title111 = 'app works!';
   private __Location: Location;
-  constructor(private router: Router, private location: Location) {
+  constructor(private router: Router, private location: Location, private activatedRoute: ActivatedRoute,
+    private titleService: Title) {
     this.__Location = location;
     this.__RouterListen(router);
   }
 
   __RouterListen(router: Router): void {
     Utility.$SetContent(Utility.$ConstItem.Route, router, false);
+    Utility.$SetContent(Utility.$ConstItem.BrowerTitle, this.titleService, false);
     Utility.$SetContent(Utility.$ConstItem.Location, this.__Location, false);
 
     const __self = this;
@@ -29,10 +32,14 @@ export class AppComponent {
         const queryParams = root.queryParams;
         const firstChild = root.firstChild;
         const routeConfig = firstChild.routeConfig;
-        const path = routeConfig.path;
+        const { path, data } = routeConfig;
+        const { title } = data || { title: '空' };
+        this.titleService.setTitle(title);
+        __self.__Title111 = title;
         // console.log(path, queryParams);
       }
     });
+
     window.onpopstate = (a) => {
       // console.log('pop');
       // const __key = Utility.$ConstItem.AppIsGoBack;

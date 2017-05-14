@@ -38,7 +38,8 @@ export class Utility {
     Route: 'XTN_Router',
     Location: 'XTN_Location',
     AppIsGoBack: 'XTN_APP_IS_GO_BACK',
-
+    BrowerTitle: 'XTN_BrowerTitle',
+    
     UrlItem: {
       GoBack: 'XTN_GOBACK',
     }

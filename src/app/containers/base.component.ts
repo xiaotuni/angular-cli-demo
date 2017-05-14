@@ -8,14 +8,25 @@ import { Utility } from './Core';
   animations: [routeAnimation]
 })
 export class BaseComponent {
+  __Title: string = '';
   @HostBinding("@routing") get routing() {
     const IsGoBack = Utility.$GetContent(Utility.$ConstItem.AppIsGoBack);
     return !!IsGoBack ? 'backward' : 'forward';
   }
   // @HostBinding('style.display') display = "block";
-  _animationServiceEventsSubscription: any;
+  
 
   constructor() {
+
+    // get brower title 
+    this.__GetBrowerTitle();
+  }
+
+  __GetBrowerTitle() {
+    const titleServer: any = Utility.$GetContent(Utility.$ConstItem.BrowerTitle);
+    if (titleServer && titleServer.getTitle) {
+      this.__Title = titleServer.getTitle() || '';
+    }
   }
 
 
