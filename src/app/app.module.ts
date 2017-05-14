@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { AnimationService } from './app.animation.service';
+
 
 import { AppRouting } from './app.router';
 import { AppComs } from './app.coms';
@@ -18,7 +20,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     AppRouting
   ],
-  providers: [],
+  providers: [AnimationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

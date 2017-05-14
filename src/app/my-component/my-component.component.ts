@@ -1,20 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { routerTransition } from '../router.animations';
-
-import { Utility } from '../Common/Utility';
+import { routeAnimation } from '../app.animations';
+import { BaseComponent } from '../base.component';
 
 @Component({
   selector: 'app-my-component',
   templateUrl: './my-component.component.html',
   styleUrls: ['./my-component.component.css'],
-  animations: [routerTransition(Utility.$GetContent(Utility.$ConstItem.AppIsGoBack))],
-  host: { '[@routerTransition]': '' }
+  animations: [routeAnimation]
 })
-export class MyComponentComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class MyComponentComponent extends BaseComponent implements OnInit {
+  title = "page 3";
 }

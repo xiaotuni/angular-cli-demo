@@ -1,20 +1,4 @@
-<div class="memberCss">
-  <div class="bind1">
-    <div class="id">
-      {{obj.id}}
-    </div>
-    <div class="name">
-      {{obj.name}}
-    </div>
-  </div>
-
-  <div class="bind2">
-
-    <div class="rowInfo" *ngFor="let row of list">
-      <div class="id">{{row.id}}</div>
-      <div class="name">{{row.name}}</div>
-      <div class="address">{{row.address}}</div>
-    </div>
-  </div>
-
+<div class="container">
+  <h1>{{title}}</h1>
+  <button (click)="routeFn('forward','product')">Go to page 2</button>
 </div>

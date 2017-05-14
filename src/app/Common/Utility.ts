@@ -115,8 +115,12 @@ export class Utility {
         console.log('go back~~~');
         __Location.back();
       }
+      setTimeout(() => {
+        this.$RemoveContent(this.$ConstItem.AppIsGoBack, false);
+      }, 650);
       return;
     }
+
     // __Route.navigate(['/' + url, { key: 1234, qq: 'qq1234' }], { queryParams: { a: 1111, b: 'adsfa', c: 'queryString' } });
     // Navigate to /results?page=1
     // this.router.navigate(['/results'], { queryParams: { page: 1 } });
