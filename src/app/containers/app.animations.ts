@@ -20,8 +20,8 @@ export const routeAnimation: AnimationEntryMetadata = [
         // transition('forward => void', [animate(speed, style({ transform: 'translateX(-100%)' }))
 
 
-        state('void', style({ position: 'fixed', width: '100%', left: '0px' })),
-        state('*', style({ position: 'fixed', width: '100%', left: '0px' })),
+        state('void', style({ position: 'fixed', width: '100%', left: '0px', top: '0px' })),
+        state('*', style({ position: 'fixed', width: '100%', left: '0px', top: '0px' })),
         // 上一页
         transition('void => backward', [style({ transform: 'translateX(-100%)' }), animate('0.6s ease-in-out', style({ transform: 'translateX(0%)' }))]),
         transition('backward => void', [style({ transform: 'translateX(0%)' }), animate('0.6s ease-in-out', style({ transform: 'translateX(100%)' }))]),

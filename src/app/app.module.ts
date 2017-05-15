@@ -10,6 +10,7 @@ import { AppRouting } from './app.router';
 import { CommonComponent, RouterComponent } from './containers/Core';
 import { AppComponent } from './app.component';
 
+
 const __Keys = Object.keys(RouterComponent);
 const PageComponentList = [];
 __Keys.forEach((key) => {
