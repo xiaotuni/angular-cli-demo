@@ -39,12 +39,24 @@ export class Utility {
     Location: 'XTN_Location',
     AppIsGoBack: 'XTN_APP_IS_GO_BACK',
     BrowerTitle: 'XTN_BrowerTitle',
-    
+    Events: {
+      HttpStatus: {}
+    },
     UrlItem: {
       GoBack: 'XTN_GOBACK',
     }
   };
 
+  static $LoadingHide() {
+
+  }
+  static $emit(name, args) {
+
+  }
+  static $actionSheet(msg) {
+
+  }
+  
   /**
    * 保存内容
    * 
