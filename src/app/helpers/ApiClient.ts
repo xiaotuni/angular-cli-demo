@@ -5,7 +5,7 @@ const methods = ['get', 'post', 'put', 'patch', 'del'];
 
 function formatUrl(path) {
   const adjustedPath = path[0] !== '/' ? '/' + path : path;
-  const _ApiUrl = 'http://127.0.0.1:11000/WebApi' + adjustedPath;
+  const _ApiUrl = 'http://127.0.0.1:30080/WebApi' + adjustedPath;
   return _ApiUrl;
 }
 
@@ -101,3 +101,4 @@ export default class ApiClient {
   empty() {
   }
 }
+
